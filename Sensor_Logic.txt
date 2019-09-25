@@ -1,0 +1,86 @@
+Sensor 1(Left) - 
+Sensor 2(Front Left) - 
+Sensor 3(Front Right) - 
+Sensor 4(Right) -
+
+if(Sensor 1 < 25cm)
+{
+	obstacle on the left;
+}
+if(Sensor 2 < 25cm)
+{
+	if(Sensor 3 < 25cm)
+	{
+		obstacle in front;
+	}
+	else
+	{	
+		if(Sensor 1 < 20cm)
+		{
+			if(Sensor 4 > 20cm)
+			{
+				Turn to the right;
+			}
+			else
+			{
+				Dead end;
+			}
+		}
+		else if(Sensor 4 < 20cm)
+		{
+			if(Sensor 1 > 20cm)
+			{
+				Turn to the left;
+			}
+			else
+			{
+				Dead end;
+			}
+		}
+		else
+		{
+			obstacle on the front left;
+		}	
+	}
+} 
+if(Sensor 3 < 25cm)
+{
+	if(Sensor 2 < 25cm)
+	{
+		obstacle in front;
+	}
+	else
+	{	
+		if(Sensor 1 < 20cm)
+		{
+			if(Sensor 4 > 20cm)
+			{
+				Turn to the right;
+			}
+			else
+			{
+				Dead end;
+			}
+		}
+		else if(Sensor 4 < 20cm)
+		{
+			if(Sensor 1 > 20cm)
+			{
+				Turn to the left;
+			}
+			else
+			{
+				Dead end;
+			}
+		}
+		else
+		{
+			obstacle on the front right;
+		}	
+	}
+} 
+if(Sensor 4 < 25cm)
+{
+	obstacle on the right;
+}
+
